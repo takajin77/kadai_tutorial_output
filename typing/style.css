@@ -1,0 +1,29 @@
+
+/* 全体の文字修飾 */
+body {
+  font-size: 6em;
+  text-align: center;
+}
+/* タイマーカウント修飾 */
+.count {
+  margin: 0;
+  font-weight: bold;
+  color: #888;
+}
+/* テキストが表示される領域 */
+.wrap {
+  margin-top: 20px;
+  padding: 80px 40px;
+  background-color: #666;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* 正しくタイプされた修飾 */
+.typed {
+  color: lightgreen;
+}
+/* ミスタイプ */
+.misstyped {
+  background-color: red;
+}

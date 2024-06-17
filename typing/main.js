@@ -40,7 +40,7 @@ const createText = () => {
   typedJs= '';
   typedField.textContent = typedJs;
   // 文字列をランダムにするMath.randomこれは少数点以下が出るので、切り捨てるためMath.floorをさらにつける
-  let random=(Math.floor(Math.random()*textLists.length));
+  let random=Math.floor(Math.random()*textLists.length);
   untypedJs = textLists[random];
   // untypedFieldにランダムに生成したテキストを代入する
   untypedField.textContent = untypedJs;
@@ -87,13 +87,13 @@ const rankCheck = scoreJs => {
     text = `あなたのランクはBです。/nAランクまであと${200 - scoreJs}です。`;
   }
   else if (scoreJs < 300) {
-    text = `あなたのランクはAです。/nAランクまであと${300 - scoreJs}です。`;
+    text = `あなたのランクはAです。/nSンクまであと${300 - scoreJs}です。`;
   }
   else if (scoreJs >= 300) {
     text = `あなたのランクはSです。/nおめでとうございます!`;
   }
 
-  生成したメッセージと一緒に文字列を返す
+  // 生成したメッセージと一緒に文字列を返す
   return `${scoreJs}文字打てました!/n${text}/n [OK]リトライ / [キャンセル]終了`;
 };
 
@@ -103,7 +103,7 @@ const gameOver = id => {
 
   const result = confirm(rankCheck(scoreJs));
   // OKボタンを押したらリロードする
-  if (result === ture) {
+  if (result == ture) {
     window.location.reload();
   }
 };
@@ -135,7 +135,7 @@ document.addEventListener('click', () => {
   document.addEventListener('keypress', keyPress);
   // スタートボタンを非表示
   startJs.style.display = 'none';
-  タイマー開始を知らせるための関数
+  // タイマー開始を知らせるための関数
 });
 
 untypedField.textContent = 'スタートボタンで開始';
